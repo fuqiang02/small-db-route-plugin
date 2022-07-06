@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings> 
+<localRepository>C:\Users\zhang\.m2\repository</localRepository><!--这里配置自己的maven仓库地址-->
+    <mirrors>
+        <mirror>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
+  <profiles>
+    <profile>
+       <id>nexus</id> 
+        <repositories>
+            <!--阿里云仓库-->
+			<repository>
+				<id>aliyun</id>
+				<name>aliyun-maven</name>
+				<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			</repository>
+			<repository>
+				<id>spring-milestones</id>
+				<name>Spring Milestones</name>
+				<url>https://maven.aliyun.com/repository/spring</url>
+			</repository>
+			<repository>
+				<id>central</id>
+				<name>maven-central</name>
+				<url>http://central.maven.org/maven2/</url>
+			</repository>
+        </repositories>
+        
+        <pluginRepositories>
+            <pluginRepository>
+				<id>public</id>
+				<name>aliyun nexus</name>
+				<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+				<releases>
+					<enabled>true</enabled>
+				</releases>
+				<snapshots>
+					<enabled>false</enabled>
+				</snapshots>
+			</pluginRepository>
+        </pluginRepositories>
+    </profile></profiles>
+</settings>
